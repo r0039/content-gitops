@@ -1,4 +1,16 @@
 ### Flux Install YAML
+#### The command should be
+```
+$ export GHUSER="your_GitHub_user"
+
+$ fluxctl install \
+--git-user=${GHUSER} \
+--git-email=${GHUSER}@users.noreply.github.com \
+--git-url=git@github.com:${GHUSER}/content-gitops \
+--git-path=namespaces,production \
+--namespace=flux | kubectl apply -f
+```
+
 #### This is the output from fluxctl when we install the fluxd daemon. This is piped to kubectl so that it may be applied to the cluster.
 ```
 ---
