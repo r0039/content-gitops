@@ -1,7 +1,13 @@
 name: Python application
 
 on:
-  push:
+# The workflow will be triggered by every commit.
+#  push:
+#    paths:
+#    - 'python/*'
+    
+# The workflow will be triggered by every Pull Request.
+  pull_request:
     paths:
     - 'python/*'
       
